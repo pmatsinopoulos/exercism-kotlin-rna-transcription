@@ -5,4 +5,4 @@ private val PROTEINS_MAP = mapOf(
     'A' to 'U'
 )
 
-fun transcribeToRna(dna: String): String = dna.map { c -> PROTEINS_MAP[c] }.joinToString("")
+fun transcribeToRna(dna: String): String = dna.map(PROTEINS_MAP::get).joinToString("")
